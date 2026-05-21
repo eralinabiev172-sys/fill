@@ -1,77 +1,93 @@
-// RANDOM COLOR GENERATOR
+const buttonsColor = document.querySelectorAll('.btn-color');
+const javaScript = document.querySelector('#js-color');
+const slides = document.querySelectorAll('.slide');
+const next = document.querySelector('#next');
+const prev = document.querySelector('#prev');
+const slideIndicator = document.querySelector('#slide-indicator');
 
-const buttonsColor = document.querySelectorAll('.btn-color')
-const javaScript = document.querySelector('#js-color')
+let index = 0;
+let sliderTimerId = null;
 
 const generateRandomColor = () => {
-    const hexCodes = '0123456789ABCDEF'
-    let color = ''
-    for (let i = 0; i < 6; i++) {
-        color += hexCodes[Math.floor(Math.random() * hexCodes.length)]
+    const hexCodes = '0123456789ABCDEF';
+    let color = '#';
+
+    for (let i = 0; i < 6; i += 1) {
+        color += hexCodes[Math.floor(Math.random() * hexCodes.length)];
     }
-    return '#' + color
-}
+
+    return color;
+};
+
+const applyAccentColor = (color) => {
+    javaScript.style.color = color;
+    document.documentElement.style.setProperty('--accent', color);
+};
 
 const setRandomColors = () => {
     buttonsColor.forEach((buttonColor) => {
-        buttonColor.innerHTML = generateRandomColor()
-        buttonColor.onclick = (event) => {
-            javaScript.style.color = event.target.innerHTML
-        }
-    })
-}
+        const color = generateRandomColor();
+        buttonColor.textContent = color;
+        buttonColor.style.borderColor = color;
+        buttonColor.style.boxShadow = `inset 0 0 0 1px ${color}`;
+        buttonColor.onclick = () => applyAccentColor(color);
+    });
+};
 
-window.onload = () => setRandomColors()
-window.onkeydown = (event) => {
-    if (event.code.toLowerCase() === 'space') {
-        event.preventDefault()
-        setRandomColors()
+const updateIndicator = () => {
+    if (slideIndicator) {
+        slideIndicator.textContent = `${String(index + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
     }
-}
-
-// SLIDER BLOCK
-
-const slides = document.querySelectorAll('.slide')
-const next = document.querySelector('#next')
-const prev = document.querySelector('#prev')
-let index = 0
+};
 
 const hideSlide = () => {
     slides.forEach((slide) => {
-        slide.style.opacity = 0
-        slide.classList.remove('active_slide')
-    })
-}
+        slide.classList.remove('active_slide');
+    });
+};
+
 const showSlide = (i = 0) => {
-    slides[i].style.opacity = 1
-    slides[i].classList.add('active_slide')
+    slides[i].classList.add('active_slide');
+    updateIndicator();
+};
+
+const renderSlider = (i) => {
+    index = i;
+    hideSlide();
+    showSlide(index);
+};
+
+const startAutoSlider = () => {
+    clearInterval(sliderTimerId);
+    sliderTimerId = setInterval(() => {
+        const nextIndex = index >= slides.length - 1 ? 0 : index + 1;
+        renderSlider(nextIndex);
+    }, 7000);
+};
+
+setRandomColors();
+renderSlider(index);
+startAutoSlider();
+
+window.addEventListener('keydown', (event) => {
+    if (event.code.toLowerCase() === 'space') {
+        event.preventDefault();
+        setRandomColors();
+    }
+});
+
+if (next) {
+    next.onclick = () => {
+        const nextIndex = index >= slides.length - 1 ? 0 : index + 1;
+        renderSlider(nextIndex);
+        startAutoSlider();
+    };
 }
 
-hideSlide()
-showSlide(index)
-
-
-const autoSlider = (i = 0) => {
-    setInterval(() => {
-        i++
-        if (i > slides.length - 1) {
-            i = 0
-        }
-        hideSlide()
-        showSlide(i)
-    }, 10000)
+if (prev) {
+    prev.onclick = () => {
+        const prevIndex = index <= 0 ? slides.length - 1 : index - 1;
+        renderSlider(prevIndex);
+        startAutoSlider();
+    };
 }
-
-next.onclick = () => {
-    index < slides.length - 1 ? index++ : index = 0
-    hideSlide()
-    showSlide(index)
-}
-
-prev.onclick = () => {
-    index > 0 ? index-- : index = slides.length - 1
-    hideSlide()
-    showSlide(index)
-}
-
-autoSlider(index)

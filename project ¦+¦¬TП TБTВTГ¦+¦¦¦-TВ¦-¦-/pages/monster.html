@@ -1,55 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Monster</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Canvas</title>
     <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/monster.css">
 </head>
 <body>
-<div class="wrapper">
-    <div class="header">
+<div class="wrapper monster_page">
+    <header class="header">
         <div class="container">
             <div class="inner_header">
-                <a href="../index.html">
+                <a href="../index.html" class="brand_link">
                     <div class="logotype">
-                        <h2>Java<span>Script</span></h2>
+                        <span class="brand_mark">FX</span>
+                        <div>
+                            <h2>Monster Canvas</h2>
+                            <p>Визуальный режим для вдохновения</p>
+                        </div>
                     </div>
                 </a>
                 <ul class="menu">
-                    <li class="menu_link">
-                        <a href="../pages/home_works.html">Home Works</a>
-                    </li>
-                    <li class="menu_link">
-                        <a href="../pages/lessons.html">Lessons</a>
-                    </li>
-                    <li class="menu_link">
-                        <a href="https://t.me/Cholpon91" target="_blank" rel="noopener noreferrer">Send me</a>
-                    </li>
+                    <li class="menu_link"><a href="../index.html">Главная</a></li>
+                    <li class="menu_link"><a href="../pages/lessons.html">Уроки</a></li>
+                    <li class="menu_link"><a href="../pages/home_works.html">Практика</a></li>
                 </ul>
-                <button class="btn" id="btn-get">Click me!</button>
+                <button class="btn" id="btn-get" type="button">Связаться</button>
             </div>
         </div>
-    </div>
+    </header>
+
+    <section class="monster_intro">
+        <div class="container">
+            <div class="monster_intro_card">
+                <span class="eyebrow">Canvas experience</span>
+                <h1>Интерактивная абстракция, которая реагирует на движение курсора</h1>
+                <p>Этот экран нужен не только для эффекта. Он показывает, как JavaScript управляет анимацией, координатами, циклами и отрисовкой в `canvas`.</p>
+            </div>
+        </div>
+    </section>
+
+    <canvas id="canvas"></canvas>
 </div>
-<canvas id="canvas"></canvas>
 
 <div class="modal">
     <div class="modal_dialog">
         <div class="modal_content">
             <form action="#">
-                <div class="modal_close">&times;</div>
-                <div class="modal_title">Мы свяжемся с вами как можно быстрее!</div>
+                <button class="modal_close" type="button" aria-label="Закрыть">&times;</button>
+                <div class="modal_title">Оставь контакт, и мы ответим как можно быстрее</div>
                 <input required placeholder="Ваше имя" name="name" type="text" class="modal_input">
-                <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal_input">
-                <button class="btn btn_dark btn_min">Перезвонить мне</button>
+                <input required placeholder="Ваш телефон" name="phone" type="text" class="modal_input">
+                <button class="btn btn_min" type="submit">Отправить заявку</button>
             </form>
         </div>
     </div>
 </div>
 
-</body>
 <script src="../js/monster.js"></script>
 <script src="../js/modal.js"></script>
+</body>
 </html>

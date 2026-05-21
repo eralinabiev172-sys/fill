@@ -1,178 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Project</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уроки JavaScript</title>
     <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/lessons.css">
 </head>
 <body>
-
 <div class="wrapper">
-    <div class="header">
+    <header class="header">
         <div class="container">
             <div class="inner_header">
-                <a href="../index.html">
+                <a href="../index.html" class="brand_link">
                     <div class="logotype">
-                        <h2>Java<span>Script</span></h2>
+                        <span class="brand_mark">JS</span>
+                        <div>
+                            <h2>Lessons Lab</h2>
+                            <p>Проверки, API и DOM-практика</p>
+                        </div>
                     </div>
                 </a>
                 <ul class="menu">
-                    <li class="menu_link">
-                        <a href="../pages/home_works.html">Home Works</a>
-                    </li>
-                    <li class="menu_link">
-                        <a href="../pages/lessons.html">Lessons</a>
-                    </li>
-                    <li class="menu_link">
-                        <a href="https://t.me/Cholpon91" target="_blank" rel="noopener noreferrer">Send me</a>
-                    </li>
+                    <li class="menu_link"><a href="../index.html">Главная</a></li>
+                    <li class="menu_link"><a href="../pages/home_works.html">Практика</a></li>
+                    <li class="menu_link"><a href="../pages/monster.html">Monster</a></li>
                 </ul>
-                <button class="btn" id="btn-get">Click me!</button>
+                <button class="btn" id="btn-get" type="button">Связаться</button>
             </div>
         </div>
-    </div>
+    </header>
 
-    <div class="phone_block">
-        <div class="container">
-            <h3>Phone checker</h3>
-            <div class="inner_phone_block">
-                <div class="form_phone">
-                    <label for="phone_input">Phone Number</label>
-                    <input type="text" id="phone_input" placeholder="+996 XXX XX-XX-XX">
-                    <button class="btn" id="phone_button">Check number</button>
-                    <span class="checker" id="phone_result"></span>
+    <main class="page_main">
+        <section class="page_intro">
+            <div class="container">
+                <div class="page_intro_card">
+                    <span class="eyebrow">Interactive lessons</span>
+                    <h1>Здесь теория сразу превращается в рабочий интерфейс</h1>
+                    <p>Эта страница собрана как тренировочная лаборатория: валидация, вкладки, конвертация данных, API-запросы и работа с DOM в реальном времени.</p>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="tab_slider">
-        <div class="container">
-            <h3>tab slider</h3>
-            <div class="inner_tab_slider">
-                <div class="tab_contents_block">
-
-                    <div class="tab_content_block">
-                        <h4>Делегирование событий</h4>
-                        <p>В JavaScript делегирование событий - это когда мы используем один обработчик событий для
-                            группы элементов, вместо того чтобы назначать отдельный обработчик каждому элементу. Когда
-                            происходит событие на одном из элементов, оно перехватывается общим обработчиком, который
-                            определяет, какой элемент вызвал событие, и выполняет соответствующие действия.</p>
+        <section class="phone_block">
+            <div class="container">
+                <div class="section_heading">
+                    <span class="eyebrow">Validation</span>
+                    <h3>Проверка номера телефона</h3>
+                </div>
+                <div class="lesson_panel">
+                    <div class="form_phone">
+                        <label for="phone_input">Введите номер в формате Кыргызстана</label>
+                        <input type="text" id="phone_input" placeholder="+996 555 12-34-56">
+                        <button class="btn" id="phone_button" type="button">Проверить</button>
+                        <span class="checker" id="phone_result"></span>
                     </div>
-                    <div class="tab_content_block">
-                        <h4>classList</h4>
-                        <p>classList в JavaScript - это свойство, которое позволяет нам работать с классами элемента
-                            HTML. С помощью classList мы можем добавлять, удалять или проверять наличие классов у
-                            элемента. Допустим, у нас есть элемент на веб-странице, и мы хотим изменить его классы с
-                            помощью JavaScript. Вместо того, чтобы обращаться напрямую к атрибуту class, мы можем
-                            использовать свойство classList этого элемента. </p>
-                    </div>
-                    <div class="tab_content_block">
-                        <h4>add()</h4>
-                        <p>Метод add позволяет добавить новый класс к списку классов элемента. Например,
-                            element.classList.add('new-class') добавит класс с именем "new-class" к элементу.</p>
-                    </div>
-                    <div class="tab_content_block">
-                        <h4>remove()</h4>
-                        <p>Метод remove позволяет удалить класс из списка классов элемента. Например,
-                            element.classList.remove('old-class') удалит класс с именем "old-class" из элемента.</p>
-                    </div>
-                    <div class="tab_content_block">
-                        <h4>contains()</h4>
-                        <p>Метод contains позволяет проверить, содержит ли элемент определенный класс. Он возвращает
-                            true, если класс присутствует, и false, если его нет. Например,
-                            element.classList.contains('highlight') вернет true, если у элемента есть класс
-                            "highlight".</p>
-                    </div>
-
-                    <div class="tab_content_items">
-                        <div class="tab_content_item tab_content_item_active">Делегирование событий</div>
-                        <div class="tab_content_item">Class List</div>
-                        <div class="tab_content_item">add()</div>
-                        <div class="tab_content_item">remove()</div>
-                        <div class="tab_content_item">contains()</div>
-                    </div>
-
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="converter">
-        <div class="container">
-            <h3>CONVERTER</h3>
-            <div class="inner_converter">
-                <div class="som">
-                    <label for="som">Som</label>
-                    <input type="number" id="som">
+        <section class="tab_slider">
+            <div class="container">
+                <div class="section_heading">
+                    <span class="eyebrow">DOM patterns</span>
+                    <h3>Вкладки по базовым концепциям</h3>
                 </div>
-                <div class="usd">
-                    <label for="usd">Usd</label>
-                    <input type="number" id="usd">
-                </div>
-                <div class="eur">
-                    <label for="eur">Eur</label>
-                    <input type="number" id="eur">
+                <div class="inner_tab_slider">
+                    <div class="tab_contents_block">
+                        <div class="tab_content_block">
+                            <h4>Делегирование событий</h4>
+                            <p>Один обработчик на родителе может отслеживать клики по дочерним элементам. Это экономит код и отлично работает с динамически созданными узлами.</p>
+                        </div>
+                        <div class="tab_content_block">
+                            <h4>classList</h4>
+                            <p>`classList` позволяет удобно добавлять, удалять, переключать и проверять CSS-классы без ручной работы со строкой `className`.</p>
+                        </div>
+                        <div class="tab_content_block">
+                            <h4>add()</h4>
+                            <p>Метод `add()` добавляет класс элементу. Это полезно, когда нужно визуально подсветить состояние, активировать карточку или показать блок.</p>
+                        </div>
+                        <div class="tab_content_block">
+                            <h4>remove()</h4>
+                            <p>Метод `remove()` снимает класс и помогает возвращать элемент в исходное состояние без лишних условий и громоздкой логики.</p>
+                        </div>
+                        <div class="tab_content_block">
+                            <h4>contains()</h4>
+                            <p>`contains()` проверяет, есть ли у элемента определённый класс. Удобно для переключателей, фильтров и интерактивных меню.</p>
+                        </div>
+
+                        <div class="tab_content_items">
+                            <div class="tab_content_item tab_content_item_active">Делегирование</div>
+                            <div class="tab_content_item">classList</div>
+                            <div class="tab_content_item">add()</div>
+                            <div class="tab_content_item">remove()</div>
+                            <div class="tab_content_item">contains()</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="card_switcher">
-        <div class="container">
-            <h3>Card Switcher</h3>
-            <div class="inner_card_switcher">
-                <button class="btn" id="btn-prev">prev</button>
-                <div class="card"></div>
-                <button class="btn" id="btn-next">next</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="weather">
-        <div class="container">
-            <h3>WEATHER</h3>
-            <div class="inner_weather">
-                <div>
-                    <input type="text" class="cityName" placeholder="Найти погоду в...">
+        <section class="converter">
+            <div class="container">
+                <div class="section_heading">
+                    <span class="eyebrow">Data transform</span>
+                    <h3>Конвертер валют</h3>
                 </div>
-                <div>
-                    <span class="city"></span>
-                    <hr>
-                    <span class="temp"></span>
+                <div class="inner_converter lesson_panel lesson_panel_three">
+                    <div class="currency_card som">
+                        <label for="som">Som</label>
+                        <input type="number" id="som" placeholder="0">
+                    </div>
+                    <div class="currency_card usd">
+                        <label for="usd">Usd</label>
+                        <input type="number" id="usd" placeholder="0">
+                    </div>
+                    <div class="currency_card eur">
+                        <label for="eur">Eur</label>
+                        <input type="number" id="eur" placeholder="0">
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="footer">
-        <div class="container">
-            <a href="https://www.instagram.com/smaiylbekovacholpon/" target="_blank" rel="noopener noreferrer">
-                <div class="inner_footer">
-                    <h2>Made in Cholpon</h2></a>
+        <section class="card_switcher">
+            <div class="container">
+                <div class="section_heading">
+                    <span class="eyebrow">External API</span>
+                    <h3>Card Switcher</h3>
                 </div>
-            </a>
+                <div class="inner_card_switcher">
+                    <button class="btn" id="btn-prev" type="button">Prev</button>
+                    <div class="card"></div>
+                    <button class="btn" id="btn-next" type="button">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="weather">
+            <div class="container">
+                <div class="section_heading">
+                    <span class="eyebrow">Live search</span>
+                    <h3>Погода по городу</h3>
+                </div>
+                <div class="inner_weather lesson_panel">
+                    <div class="weather_search">
+                        <input type="text" class="cityName" placeholder="Например: Almaty, Bishkek, London">
+                    </div>
+                    <div class="weather_result">
+                        <span class="city"></span>
+                        <hr>
+                        <span class="temp"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="inner_footer">
+                <h2>Practice makes JavaScript stick</h2>
+                <a href="../pages/home_works.html">Открыть домашние задания</a>
+            </div>
         </div>
-    </div>
+    </footer>
 </div>
 
 <div class="modal">
     <div class="modal_dialog">
         <div class="modal_content">
             <form action="#">
-                <div class="modal_close">&times;</div>
-                <div class="modal_title">Мы свяжемся с вами как можно быстрее!</div>
+                <button class="modal_close" type="button" aria-label="Закрыть">&times;</button>
+                <div class="modal_title">Оставь контакт, и мы ответим как можно быстрее</div>
                 <input required placeholder="Ваше имя" name="name" type="text" class="modal_input">
-                <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal_input">
-                <button class="btn btn_dark btn_min">Перезвонить мне</button>
+                <input required placeholder="Ваш телефон" name="phone" type="text" class="modal_input">
+                <button class="btn btn_min" type="submit">Отправить заявку</button>
             </form>
         </div>
     </div>
 </div>
 
-</body>
 <script src="../js/lesson.js"></script>
 <script src="../js/modal.js"></script>
+</body>
 </html>

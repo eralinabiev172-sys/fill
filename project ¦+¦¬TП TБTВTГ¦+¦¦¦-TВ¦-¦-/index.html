@@ -1,152 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Java Script</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Energy</title>
     <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <div class="wrapper">
-    <div class="header">
+    <header class="header">
         <div class="container">
             <div class="inner_header">
-                <a href="index.html">
+                <a href="index.html" class="brand_link">
                     <div class="logotype">
-                        <h2>JavaScript</h2>
+                        <span class="brand_mark">JS</span>
+                        <div>
+                            <h2>JavaScript</h2>
+                            <p>Учись быстро. Делай красиво.</p>
+                        </div>
                     </div>
                 </a>
                 <ul class="menu">
-                    <li class="menu_link">
-                        <a href="pages/home_works.html">Home Works</a>
-                    </li>
-                    <li class="menu_link">
-                        <a href="pages/lessons.html">Lessons</a>
-                    </li>
-                    <li class="menu_link">
-                        <a href="https://t.me/Cholpon91" target="_blank" rel="noopener noreferrer">Send me</a>
-                    </li>
+                    <li class="menu_link"><a href="pages/home_works.html">Практика</a></li>
+                    <li class="menu_link"><a href="pages/lessons.html">Уроки</a></li>
+                    <li class="menu_link"><a href="pages/monster.html">Monster</a></li>
                 </ul>
-                <button class="btn" id="btn-get">Click me!</button>
+                <button class="btn" id="btn-get" type="button">Связаться</button>
             </div>
         </div>
-    </div>
+    </header>
 
-    <div class="main_block">
-        <div class="container">
-            <div class="inner_main">
-                <h1><strong id="js-color">JavaScript</strong> - на самом деле очень легко и просто!</h1>
-                <div class="colors-buttons">
-                    <button class="btn btn-color"></button>
-                    <button class="btn btn-color"></button>
-                    <button class="btn btn-color"></button>
-                    <button class="btn btn-color"></button>
+    <main>
+        <section class="main_block">
+            <div class="container">
+                <div class="hero_grid">
+                    <div class="inner_main">
+                        <span class="eyebrow">Frontend start pack</span>
+                        <h1><strong id="js-color">JavaScript</strong> проще, чем кажется, когда теория сразу превращается в движение.</h1>
+                        <p class="hero_text">На этом сайте собраны мини-проекты, тренажёры и темы, которые помогают не просто читать про JS, а сразу чувствовать, как он работает в интерфейсе.</p>
+                        <div class="hero_actions">
+                            <a class="btn" href="pages/lessons.html">Открыть уроки</a>
+                            <a class="btn btn_ghost" href="pages/home_works.html">Перейти к практике</a>
+                        </div>
+                        <div class="colors-panel">
+                            <p>Нажми на цвет или клавишу `Space`, чтобы поменять акцент.</p>
+                            <div class="colors-buttons">
+                                <button class="btn btn-color" type="button"></button>
+                                <button class="btn btn-color" type="button"></button>
+                                <button class="btn btn-color" type="button"></button>
+                                <button class="btn btn-color" type="button"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero_card">
+                        <div class="hero_metric">
+                            <span>4</span>
+                            <p>ключевые темы на главной</p>
+                        </div>
+                        <div class="hero_metric">
+                            <span>3</span>
+                            <p>страницы с интерактивной практикой</p>
+                        </div>
+                        <div class="hero_metric">
+                            <span>∞</span>
+                            <p>вариантов, как сделать проект ярче</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="slider_block">
-        <div class="container">
-            <div class="inner_slider">
-                <div class="slider">
-                    <button class="btn-slide" id="prev">&lt;prev</button>
-                    <div class="slide active_slide">
-                        <div class="slide_card">
-                            <h3>regular expression</h3>
-                            <p>Простыми словами, регулярное выражение - это набор символов, который задает определенные правила для поиска и сопоставления текста. Вы можете использовать регулярные выражения, чтобы найти определенные строки в тексте, заменить части строки на другие значения или извлечь нужную информацию из текста.</p>
-                            <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Regular_expressions" target="_blank">узнать подробнее</a>
+        <section class="topics_block">
+            <div class="container">
+                <div class="section_heading">
+                    <span class="eyebrow">Что внутри</span>
+                    <h3>Темы, которые реально двигают понимание JavaScript</h3>
+                </div>
+                <div class="inner_slider">
+                    <div class="slider_shell">
+                        <button class="btn-slide" id="prev" type="button" aria-label="Предыдущая тема">&lt;</button>
+                        <div class="slider">
+                            <div class="slide active_slide">
+                                <div class="slide_card">
+                                    <span class="slide_tag">Pattern power</span>
+                                    <h3>Regular Expressions</h3>
+                                    <p>Регулярные выражения помогают проверять почту, телефоны, формы и быстро искать нужные шаблоны в строках.</p>
+                                    <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Regular_expressions" target="_blank" rel="noopener noreferrer">Узнать подробнее</a>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="slide_card">
+                                    <span class="slide_tag">Function mindset</span>
+                                    <h3>Recursion</h3>
+                                    <p>Рекурсия учит разбивать большую задачу на похожие маленькие шаги. Это важное мышление для алгоритмов и обхода структур.</p>
+                                    <a href="https://learn.javascript.ru/recursion" target="_blank" rel="noopener noreferrer">Узнать подробнее</a>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="slide_card">
+                                    <span class="slide_tag">Data exchange</span>
+                                    <h3>JSON</h3>
+                                    <p>JSON нужен почти везде: API, настройки, локальное хранение данных. Это универсальный формат общения между приложениями.</p>
+                                    <a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/Objects/JSON" target="_blank" rel="noopener noreferrer">Узнать подробнее</a>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="slide_card">
+                                    <span class="slide_tag">Async logic</span>
+                                    <h3>Event Loop</h3>
+                                    <p>Понимание event loop объясняет, почему асинхронный код ведёт себя именно так, и помогает не путаться в очередях задач.</p>
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop" target="_blank" rel="noopener noreferrer">Узнать подробнее</a>
+                                </div>
+                            </div>
                         </div>
+                        <button class="btn-slide" id="next" type="button" aria-label="Следующая тема">&gt;</button>
                     </div>
-                    <div class="slide">
-                        <div class="slide_card">
-                            <h3>recursion</h3>
-                            <p>Простыми словами, рекурсия - это, когда функция делает повторяющиеся вызовы самой себя для решения задачи, пока не достигнет определенного условия выхода из рекурсии.</p>
-                            <a href="https://learn.javascript.ru/recursion" target="_blank">узнать подробнее</a>
-                        </div>
+                    <div class="slider_status">
+                        <span id="slide-indicator">01 / 04</span>
                     </div>
-                    <div class="slide">
-                        <div class="slide_card">
-                            <h3>json</h3>
-                            <p>Простыми словами, JSON - это способ представления данных в виде текста, чтобы они могли быть легко поняты и использованы различными программами. Он использует простые правила для описания объектов и массивов, а также для представления простых типов данных, таких как строки, числа, логические значения и т.д.</p>
-                            <a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/Objects/JSON" target="_blank">узнать подробнее</a>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide_card">
-                            <h3>event loop</h3>
-                            <p>Простыми словами, event loop похож на дежурного, который непрерывно проверяет, произошло ли какое-либо событие, и реагирует на него, когда оно происходит. Он имеет список задач, которые нужно выполнить, и он перебирает этот список событий одно за другим, обрабатывая каждое событие, когда оно наступает.</p>
-                            <a href="https://highload.today/kak-ustroen-event-loop-v-javascript-parallelnaya-model-i-tsikl-sobytij/" target="_blank">узнать подробнее</a>
-                        </div>
-                    </div>
-                    <button class="btn-slide" id="next">next&gt;</button>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="botlle">
-        <div class="container">
-            <div class="bottle_inner">
-                <a href="pages/monster.html">
-                    <div class="bowl">
-                        <div class="shadow"></div>
-                        <div class="liquid"></div>
-
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="block_video">
-        <div class="container">
-            <h3>Полезный ролик про Event Loop</h3>
-            <div class="inner_block_video">
-                <iframe width="80%" height="450" src="https://www.youtube.com/" title="YouTube video player" frameborder="2" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <div class="container">
-            <a href="https://www.instagram.com/smaiylbekovacholpon/" target="_blank" rel="noopener noreferrer">
-                <div class="inner_footer">
-                    <h2>Made in Cholpon</h2></a>
+        <section class="feature_grid_block">
+            <div class="container">
+                <div class="feature_grid">
+                    <article class="feature_card">
+                        <h3>Практика</h3>
+                        <p>Проверка Gmail, анимация по контуру и секундомер для закрепления основ DOM и таймеров.</p>
+                        <a href="pages/home_works.html">Открыть задания</a>
+                    </article>
+                    <article class="feature_card">
+                        <h3>Инструменты</h3>
+                        <p>Проверка номера, конвертер валют, карточки с API и погодный блок с живыми запросами.</p>
+                        <a href="pages/lessons.html">Перейти к урокам</a>
+                    </article>
+                    <article class="feature_card feature_card_glow">
+                        <h3>Monster Canvas</h3>
+                        <p>Отдельная страница с атмосферной графикой на `canvas`, чтобы вспомнить, что JS умеет быть не только полезным, но и зрелищным.</p>
+                        <a href="pages/monster.html">Запустить режим вау</a>
+                    </article>
                 </div>
-            </a>
+            </div>
+        </section>
+
+        <section class="botlle">
+            <div class="container">
+                <div class="alchemy_layout">
+                    <div class="alchemy_text">
+                        <span class="eyebrow">Mini surprise</span>
+                        <h3>Нажми на колбу и открой экспериментальную страницу</h3>
+                        <p>Немного визуальной магии тоже важно. Когда проект выглядит эффектно, учиться интереснее и мотивация держится дольше.</p>
+                    </div>
+                    <div class="bottle_inner">
+                        <a href="pages/monster.html" aria-label="Открыть monster page">
+                            <div class="bowl">
+                                <div class="shadow"></div>
+                                <div class="liquid"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="block_video">
+            <div class="container">
+                <div class="section_heading">
+                    <span class="eyebrow">Must watch</span>
+                    <h3>Короткое видео про Event Loop</h3>
+                </div>
+                <div class="inner_block_video">
+                    <iframe src="https://www.youtube.com/embed/8aGhZQkoFbQ" title="JavaScript Event Loop" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="inner_footer">
+                <h2>Built to make JavaScript feel alive</h2>
+                <a href="https://t.me/Cholpon91" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+            </div>
         </div>
-    </div>
+    </footer>
 </div>
 
 <div class="modal">
     <div class="modal_dialog">
         <div class="modal_content">
             <form action="#">
-                <div class="modal_close">&times;</div>
-                <div class="modal_title">Мы свяжемся с вами как можно быстрее!</div>
-                <input
-                    required
-                    placeholder="Ваше имя"
-                    name="name"
-                    type="text"
-                    class="modal_input"
-                >
-                <input
-                    required
-                    placeholder="Ваш номер телефона"
-                    name="phone"
-                    type="text"
-                    class="modal_input"
-                >
-                <button class="btn btn_dark btn_min">Перезвонить мне</button>
+                <button class="modal_close" type="button" aria-label="Закрыть">&times;</button>
+                <div class="modal_title">Оставь контакт, и мы свяжемся с тобой как можно быстрее</div>
+                <input required placeholder="Ваше имя" name="name" type="text" class="modal_input">
+                <input required placeholder="Ваш телефон" name="phone" type="text" class="modal_input">
+                <button class="btn btn_min" type="submit">Отправить заявку</button>
             </form>
         </div>
     </div>
 </div>
 
-</body>
 <script src="js/main.js"></script>
 <script src="js/modal.js"></script>
+</body>
 </html>

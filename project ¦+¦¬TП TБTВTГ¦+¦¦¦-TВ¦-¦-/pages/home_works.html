@@ -1,106 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Home Works</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика JavaScript</title>
     <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/home_works.css">
 </head>
 <body>
-
 <div class="wrapper">
-    <div class="header">
+    <header class="header">
         <div class="container">
             <div class="inner_header">
-                <a href="../index.html">
+                <a href="../index.html" class="brand_link">
                     <div class="logotype">
-                        <h2>Java<span>Script</span></h2>
+                        <span class="brand_mark">JS</span>
+                        <div>
+                            <h2>Home Works</h2>
+                            <p>Немного логики, анимации и таймеров</p>
+                        </div>
                     </div>
                 </a>
                 <ul class="menu">
-                    <li class="menu_link">
-                        <a href="../pages/home_works.html">Home Works</a>
-                    </li>
-                    <li class="menu_link">
-                        <a href="../pages/lessons.html">Lessons</a>
-                    </li>
-                    <li class="menu_link">
-                        <a href="https://t.me/Cholpon91" target="_blank" rel="noopener noreferrer">Send me</a>
-                    </li>
+                    <li class="menu_link"><a href="../index.html">Главная</a></li>
+                    <li class="menu_link"><a href="../pages/lessons.html">Уроки</a></li>
+                    <li class="menu_link"><a href="../pages/monster.html">Monster</a></li>
                 </ul>
-                <button class="btn" id="btn-get">Click me!</button>
+                <button class="btn" id="btn-get" type="button">Связаться</button>
             </div>
         </div>
-    </div>
+    </header>
 
-    <div class="gmail_block">
-        <div class="container">
-            <h3>Home work 1 (part 1)</h3>
-            <div class="inner_gmail_block">
-                <div class="form_gmail">
-                    <label for="gmail_input"></label>
-                    <input type="text" id="gmail_input" placeholder="your gmail">
-                    <button class="btn" id="gmail_button">Check gmail</button>
-                    <span class="checker" id="gmail_result"></span>
+    <main class="page_main">
+        <section class="page_intro">
+            <div class="container">
+                <div class="page_intro_card">
+                    <span class="eyebrow">Practice zone</span>
+                    <h1>Домашние задания, которые двигают навык руками</h1>
+                    <p>Каждый блок на этой странице развивает отдельную механику: регулярные выражения, анимацию, таймеры и работу с состоянием интерфейса.</p>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="move_block">
-        <div class="container">
-            <h3>Home work 1 (part 2)</h3>
-            <div class="inner_move_block">
-                <div class="parent_block">
-                    <div class="child_block"></div>
+        <section class="gmail_block">
+            <div class="container">
+                <div class="section_heading">
+                    <span class="eyebrow">Regex</span>
+                    <h3>Проверка Gmail</h3>
+                </div>
+                <div class="lesson_panel">
+                    <div class="form_gmail">
+                        <label for="gmail_input">Введите Gmail адрес</label>
+                        <input type="text" id="gmail_input" placeholder="yourname@gmail.com">
+                        <button class="btn" id="gmail_button" type="button">Проверить</button>
+                        <span class="checker" id="gmail_result"></span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="stopwatch">
-        <div class="container">
-            <h3>Home work 2 </h3>
-            <div class="time">
-                <div class="time_block">
-                    <div class="interval" id="seconds">0</div>
+        <section class="move_block">
+            <div class="container">
+                <div class="section_heading">
+                    <span class="eyebrow">Animation</span>
+                    <h3>Движение по периметру</h3>
+                </div>
+                <div class="inner_move_block lesson_panel">
+                    <div class="parent_block">
+                        <div class="child_block"></div>
+                    </div>
                 </div>
             </div>
-            <div class="time_buttons">
-                <button class="btn" id="start">Start</button>
-                <button class="btn" id="stop">Stop</button>
-                <button class="btn" id="reset">Reset</button>
+        </section>
+
+        <section class="stopwatch">
+            <div class="container">
+                <div class="section_heading">
+                    <span class="eyebrow">Timers</span>
+                    <h3>Секундомер</h3>
+                </div>
+                <div class="stopwatch_panel lesson_panel">
+                    <div class="time">
+                        <div class="time_block">
+                            <div class="interval" id="seconds">0</div>
+                        </div>
+                    </div>
+                    <div class="time_buttons">
+                        <button class="btn" id="start" type="button">Start</button>
+                        <button class="btn btn_ghost" id="stop" type="button">Stop</button>
+                        <button class="btn btn_ghost" id="reset" type="button">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="inner_footer">
+                <h2>Step by step turns into skill</h2>
+                <a href="../pages/lessons.html">Вернуться к урокам</a>
             </div>
         </div>
-    </div>
-
-    <div class="footer">
-        <div class="container">
-            <a href="https://www.instagram.com/smaiylbekovacholpon/" target="_blank" rel="noopener noreferrer">
-                <div class="inner_footer">
-                    <h2>Made in Cholpon</h2></a>>
-                </div>
-            </a>
-        </div>
-    </div>
+    </footer>
 </div>
 
 <div class="modal">
     <div class="modal_dialog">
         <div class="modal_content">
             <form action="#">
-                <div class="modal_close">&times;</div>
-                <div class="modal_title">Мы свяжемся с вами как можно быстрее!</div>
+                <button class="modal_close" type="button" aria-label="Закрыть">&times;</button>
+                <div class="modal_title">Оставь контакт, и мы ответим как можно быстрее</div>
                 <input required placeholder="Ваше имя" name="name" type="text" class="modal_input">
-                <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal_input">
-                <button class="btn btn_dark btn_min">Перезвонить мне</button>
+                <input required placeholder="Ваш телефон" name="phone" type="text" class="modal_input">
+                <button class="btn btn_min" type="submit">Отправить заявку</button>
             </form>
         </div>
     </div>
 </div>
 
-</body>
 <script src="../js/home_works.js"></script>
 <script src="../js/modal.js"></script>
+</body>
 </html>
